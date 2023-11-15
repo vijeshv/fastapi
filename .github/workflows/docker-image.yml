@@ -1,0 +1,26 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: logon to docket
+      env:
+        DOCKER_USERNAME: ${{secrets.DOCKER USERNAME}}
+        DOCKER_UPASSWORD: ${{secrets.DOCKER PASSWORD}}
+      run: docker login -u DOCKER_USERNAME -p DOCKER_PASSWORD
+    - name: Build the Docker image
+      run: docker build -t fastapi
+     # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: push to docker hub 
+      run: docker push vijesh/fastapiv:latest
