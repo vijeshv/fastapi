@@ -23,4 +23,4 @@ jobs:
       run: docker build -t fastapi
      # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
     - name: push to docker hub 
-      run: docker push vijesh/fastapiv:latest
+      run: docker push vijesh/fastapi:latest
