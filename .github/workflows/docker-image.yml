@@ -22,7 +22,5 @@ jobs:
     - name: Build the Docker image
       run: docker build -t vijeshvn/fastapi .
      # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-    - name: check docker image
-      run:
     - name: push to docker hub 
       run: docker push vijeshvn/fastapi:latest
