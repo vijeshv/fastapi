@@ -18,10 +18,10 @@ jobs:
     - name: list docker
       run: sudo docker ps -all      
     - name: delete old container
-      run: docker rm -f fastapi-container || true
+      run: sudo docker rm -f fastapi-container || true
     - name: run docker
       run: sudo docker run -d -p 8080:8080 --name fastapi-container vijeshvn/fastapi
     - name: list docker
-      run: docker ps -all
+      run: sudo docker ps -all
     - name: kernal
       run: uname -a
