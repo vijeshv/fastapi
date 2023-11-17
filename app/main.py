@@ -8,7 +8,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-        return {"Hello vijeshamabiar november 16 th 2024": "World 2004"}
+        return {"Hello vijesh": "CICD pipeline is creation is over"}
 
 
 @app.get("/items/{item_id}")
