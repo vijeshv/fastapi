@@ -16,7 +16,7 @@ jobs:
     - name: Pull Docker Image
       run: sudo docker pull vijeshvn/fastapi:latest
     - name: list docker
-      run: docker ps -all      
+      run: sudo docker ps -all      
     - name: delete old container
       run: docker rm -f fastapi-container || true
     - name: run docker
